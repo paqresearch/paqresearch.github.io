@@ -1380,14 +1380,14 @@ return function(){for(var n=0,e=0;e<t;++e)n+=Math.random();return n}},um=functio
         var margin = {top: 20, right: 20, bottom: 20, left: 20};
         //   go through each key of x.options.margin
         //   use this value if provided from the R side
-        Object.keys(x.options.margin).map(function(ky){
-          if(x.options.margin[ky] !== null) {
-            margin[ky] = x.options.margin[ky];
-          }
+        // Object.keys(x.options.margin).map(function(ky){
+        //   if(x.options.margin[ky] !== null) {
+        //     margin[ky] = x.options.margin[ky];
+        //   }
           // set the margin on the svg with css style
           // commenting this out since not correct
           // s.style(["margin",ky].join("-"), margin[ky]);
-        });
+        // });
 
         // get the width and height
         var width = el.getBoundingClientRect().width - margin.right - margin.left;
@@ -1650,6 +1650,22 @@ return function(){for(var n=0,e=0;e<t;++e)n+=Math.random();return n}},um=functio
     height: 40px;
   }
 </style>
+<script>
+/*
+function sendWidthToParentWindow() {
+  if (window.parent) {
+    window.parent.postMessage(
+      {
+        "paq-embed-height": {
+          [id]: height,
+        },
+      },
+      "*"
+    );
+  }
+}
+*/
+</script>
 </head>
 <body style="background-color: white;">
   <div id="htmlwidget_container" class="paq-main-container">
