@@ -1610,7 +1610,13 @@ return function(){for(var n=0,e=0;e<t;++e)n+=Math.random();return n}},um=functio
   .paq-sankey-wrapper {
     flex: 1 0 0px;
     margin: -20px -20px -20px -20px;
-    min-height: 300px;
+    min-height: 400px;
+    position: relative;
+  }
+
+  .paq-sankey-wrapper > * {
+    position: absolute;
+    inset: 0;
   }
 
   .paq-side-labels {
