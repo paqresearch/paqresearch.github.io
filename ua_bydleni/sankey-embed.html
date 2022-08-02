@@ -1585,14 +1585,13 @@ return function(){for(var n=0,e=0;e<t;++e)n+=Math.random();return n}},um=functio
     margin: 0;
     padding: 0 !important;
     font-family: 'Fira Sans', sans-serif;
+    overflow: initial !important;
+    width: auto !important;
+    height: auto !important;
   }
 
   .paq-main-container {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    position: static !important;
     inset: 0 !important;
     display: flex;
     flex-direction: column;
@@ -1611,6 +1610,7 @@ return function(){for(var n=0,e=0;e<t;++e)n+=Math.random();return n}},um=functio
   .paq-sankey-wrapper {
     flex: 1 0 0px;
     margin: -20px -20px -20px -20px;
+    min-height: 300px;
   }
 
   .paq-side-labels {
@@ -1654,27 +1654,35 @@ return function(){for(var n=0,e=0;e<t;++e)n+=Math.random();return n}},um=functio
   }
 </style>
 <script>
-/*
 function sendWidthToParentWindow() {
+  const containerEl = document.querySelector('#htmlwidget_container')
+  const height = containerEl.getBoundingClientRect().height
+
   if (window.parent) {
     window.parent.postMessage(
       {
         "paq-embed-height": {
-          [id]: height,
+          "paq-ua-bydleni-sankey": height,
         },
       },
       "*"
     );
   }
 }
-*/
+document.addEventListener("DOMContentLoaded", function() {
+  sendWidthToParentWindow()
+  setTimeout(sendWidthToParentWindow, 300)
+  setTimeout(sendWidthToParentWindow, 1000)
+  setTimeout(sendWidthToParentWindow, 2000)
+  setTimeout(sendWidthToParentWindow, 5000)
+})
 </script>
 </head>
 <body style="background-color: white;">
   <div id="htmlwidget_container" class="paq-main-container">
     <h1 class="paq-title">Pohyb ukrajinských uprchlíků z původního typu ubytování do jiného</h1>
     <div class="paq-side-labels">
-      <div class="paq-side-label-left">Původní bydlení v&nbsp;ČR</div>
+      <div class="paq-side-label-left">Původní bydlení uprchlíků v&nbsp;ČR</div>
       <div class="paq-side-label-right">Aktuální bydlení v&nbsp;ČR (červenec&nbsp;2022)</div>
     </div>
     <div class="paq-sankey-wrapper">
