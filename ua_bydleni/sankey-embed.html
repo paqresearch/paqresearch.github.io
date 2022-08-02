@@ -1424,6 +1424,8 @@ return function(){for(var n=0,e=0;e<t;++e)n+=Math.random();return n}},um=functio
         var formatNumber = d3.format(",.0f"),
         format = function(d) { return formatNumber(d); }
 
+        console.log('renderValue', { nodes, links, width, height, nodeWidth: options.nodeWidth, nodePadding: options.nodePadding })
+
         // create d3 sankey layout
         sankey
             .nodes(nodes)
@@ -1527,7 +1529,7 @@ return function(){for(var n=0,e=0;e<t;++e)n+=Math.random();return n}},um=functio
 
 
         // adjust viewBox to fit the bounds of our tree
-        var s = d3.select(svg.node().parentNode);
+        var s = d3.select(svg.node());
         s.attr(
             "viewBox",
             [
