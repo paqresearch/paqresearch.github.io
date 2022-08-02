@@ -1344,6 +1344,7 @@ return function(){for(var n=0,e=0;e<t;++e)n+=Math.random();return n}},um=functio
     },
 
     resize: function(el, width, height, instance) {
+      console.log('resize', { el, width, height, instance })
         /*  handle resizing now through the viewBox
         d3.select(el).select("svg")
             .attr("width", width)
