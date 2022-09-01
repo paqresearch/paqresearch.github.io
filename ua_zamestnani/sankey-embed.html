@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<!-- TODO -->
-<title>Doplnit titulek – PAQ Research</title>
+<title>Pracovní uplatnění ukrajinských uprchlíků v Česku podle kvalifikací – PAQ Research</title>
 <style>body{background-color:white;}</style>
 <script>(function() {
   // If window.HTMLWidgets is already defined, then use it; otherwise create a
@@ -1510,7 +1509,7 @@ return function(){for(var n=0,e=0;e<t;++e)n+=Math.random();return n}},um=functio
             .append("title")
             .append("foreignObject")
             .append("xhtml:body")
-            .html(function(d) { return "<pre>" + d.name + "<br>" + format(d.value) + 
+            .html(function(d) { return "<pre>" + d.name + " <br>" + format(d.value) + 
                 " " + options.units + "</pre>"; });
 
         node.append("text")
@@ -1636,7 +1635,7 @@ return function(){for(var n=0,e=0;e<t;++e)n+=Math.random();return n}},um=functio
   }
 
   .paq-footer {
-    margin: 10px 0 10px 0;
+    margin: 20px 0 10px 0;
     font-size: 12px;
     line-height: 1.2;
     color: #888888;
@@ -1646,6 +1645,15 @@ return function(){for(var n=0,e=0;e<t;++e)n+=Math.random();return n}},um=functio
 
   .paq-footer p {
     margin: 0;
+  }
+
+  .paq-footer p a {
+    color: #888888;
+    text-decoration: underline;
+  }
+
+  .paq-footer p a:hover, .paq-footer p a:focus {
+    color: black;
   }
 
   .paq-footer-logo {
@@ -1686,17 +1694,17 @@ document.addEventListener("DOMContentLoaded", function() {
 </head>
 <body style="background-color: white;">
   <div id="htmlwidget_container" class="paq-main-container">
-    <h1 class="paq-title">Doplnit titulek</h1>
+    <h1 class="paq-title">Pracovní uplatnění ukrajinských uprchlíků v&nbsp;Česku podle kvalifikací</h1>
     <div class="paq-side-labels">
-      <div class="paq-side-label-left">Původní zaměstnání v UA</div>
-      <div class="paq-side-label-right">Aktuální zaměstnání v&nbsp;ČR (srpen&nbsp;2022)</div>
+      <div class="paq-side-label-left">Původní profese na&nbsp;Ukrajině</div>
+      <div class="paq-side-label-right">Aktuální profese v&nbsp;ČR (červenec–srpen&nbsp;2022)</div>
     </div>
     <div class="paq-sankey-wrapper">
       <div id="htmlwidget-364deb491253343094d9" class="sankeyNetwork html-widget" style="width:960px;height:500px;"></div>
     </div>
     <div class="paq-footer">
       <p>
-      Doplnit poznamku. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dapibus fermentum ipsum. Etiam posuere lacus quis dolor. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Aenean placerat. Praesent id justo in neque elementum ultrices. Nullam dapibus fermentum ipsum. Fusce aliquam vestibulum ipsum. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Maecenas libero.
+      Levá strana: počet uprchlíků ve vzorku, kteří na Ukrajině pracovali v dané kategorii profesí podle klasifikace <a href="http://www.cz-isco.cz" target="_blank">ISCO</a>. Pravá strana: Počet uprchlíků ve vzorku, kteří v červenci–srpnu pracovali v dané kategorii profesí v Česku. Celkové N=1924; Zařazeni jsou pouze ekonomicky aktivní lidé (ne důchodci, studenti, na rodičovské). Znění otázek: Jakou práci jste vykonával(a) naposledy před odchodem z Ukrajiny?; (Název práce, Co bylo náplní práce) & Jakou práci nyní v Česku převážně vykonáváte? (Název práce, Co je náplní práce). Výzkum probíhal na online panelu uprchlíků z Ukrajiny sestaveném Sociologickým ústavem AV ČR ve spolupráci s MPSV.
       </p>
       <a class="paq-footer-logo" href="https://www.paqresearch.cz/" target="_blank">
         <svg width="132" height="80" viewBox="0 0 439 267" fill="none" xmlns="http://www.w3.org/2000/svg">
