@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+  <link rel="icon" href="favicon.png">
+
+  <meta property="og:url" content="https://paqresearch.github.io/ua_zamestnani/sankey.html"/>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Doplnit titulek - PAQ Research">
+  <meta property="og:description" content="Doplnit">
+  <meta property="og:image" content="https://paqresearch.github.io/ua_zamestnani/sankey-preview.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Doplnit titulek - PAQ Research">
+  <meta name="twitter:description" content="Doplnit">
+  <meta name="twitter:site" content="@paq_research">
+  <meta name="twitter:creator" content="@paq_research">
+  <meta name="twitter:image" content="https://paqresearch.github.io/ua_zamestnani/sankey-preview.png">
+  <meta name="twitter:image:src" content="https://paqresearch.github.io/ua_zamestnani/sankey-preview.png">
+
+  <title>Doplnit titulek – PAQ Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+  <style>
+    body {
+      margin: 0 15px;
+      padding: 0;
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    .paq-main-container {
+      margin: 20px auto;
+      max-width: 800px;
+    }
+
+    .paq-pre {
+      margin: 0;
+      padding: 10px;
+      background: #eee;
+      white-space: break-spaces;
+      word-break: break-word;
+      font-size: 12px;
+    }
+
+    .paq-embed-container {
+      margin: 30px 0 0 0;
+    }
+
+    .paq-embed-container h2 {
+      margin: 0 0 10px 0;
+      padding: 0;
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: bold;
+    }
+  </style>
+  <script type="text/javascript">
+const embedCode = '<iframe src="https://paqresearch.github.io/ua_zamestnani/sankey-embed.html" scrolling="no" frameborder="0" allowtransparency="true" style="width: 0; min-width: 100% !important;" height="700" id="paq-ua-zamestnani-sankey"></iframe>' + "\n" + '<script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["paq-embed-height"])for(var e in a.data["paq-embed-height"])if("paq-ua-zamestnani-sankey"==e){var d=document.querySelector("#paq-ua-zamestnani-sankey");d&&(d.style.height=a.data["paq-embed-height"][e]+"px")}});</' + 'script>';
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelector('#sankey-embed-code').textContent = embedCode.trim()
+})
+
+  </script>
+</head>
+<body>
+  <div class="paq-main-container">
+    <iframe src="sankey-embed.html" scrolling="no" frameborder="0" allowtransparency="true" style="width: 0; min-width: 100% !important;" height="700" id="paq-ua-zamestnani-sankey"></iframe>
+    <script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["paq-embed-height"])for(var e in a.data["paq-embed-height"])if("paq-ua-zamestnani-sankey"==e){var d=document.querySelector("#paq-ua-zamestnani-sankey");d&&(d.style.height=a.data["paq-embed-height"][e]+"px")}});</script>
+
+    <div class="paq-embed-container">
+      <h2>Kód k vložení do vlastních stránek</h2>
+      <pre class="paq-pre"><code id="sankey-embed-code"></code></pre>
+    </div>
+  </div>
+</body>
+</html>
