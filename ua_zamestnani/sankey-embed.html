@@ -1528,7 +1528,7 @@ return function(){for(var n=0,e=0;e<t;++e)n+=Math.random();return n}},um=functio
 
 
         // adjust viewBox to fit the bounds of our tree
-        var s = d3.select(svg.node().parentNode);
+        var s = d3.select(svg.node());
         s.attr(
             "viewBox",
             [
