@@ -1257,7 +1257,30 @@ return function(){for(var n=0,e=0;e<t;++e)n+=Math.random();return n}},um=functio
             i;
 
         // Push any overlapping nodes down.
-        nodes.sort(ascendingDepth);
+        // nodes.sort(ascendingDepth);
+        const sortList = {
+          "Zákonodárci a řídící pracovníci": 1,
+          "Specialisté": 2,
+          "Techničtí a odborní pracovníci": 3,
+          "Úředníci": 4,
+          "Pracovníci ve službách a prodeji": 5,
+          "Kvalifikovaní pracovníci v zemědělství, lesnictví a rybářství": 6,
+          "Řemeslníci a opraváři": 7,
+          "Obsluha strojů a zařízení, montéři": 8,
+          "Pomocní a nekvalifikovaní pracovníci": 9,
+          "Pracují na dálku na Ukrajině": 10,
+          "Nepracují": 11,
+        }
+        nodes.sort((a, b) => {
+          if (sortList[a.name] < sortList[b.name]) {
+            return -1;
+          }
+          if (sortList[a.name] > sortList[b.name]) {
+            return 1;
+          }
+          return 0;
+        })
+
         for (i = 0; i < n; ++i) {
           node = nodes[i];
           dy = y0 - node.y;
@@ -1607,7 +1630,7 @@ return function(){for(var n=0,e=0;e<t;++e)n+=Math.random();return n}},um=functio
 
   .paq-sankey-wrapper {
     flex: 1 0 0px;
-    margin: -20px -20px -20px -20px;
+    margin: -10px -20px -20px -20px;
     min-height: 600px;
     position: relative;
   }
