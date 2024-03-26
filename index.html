@@ -1,0 +1,60 @@
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nejdřív zábava, PAQ research</title>
+        <style>
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img id="randomImage" src="" alt="Studio Kroměříž" />
+            <a
+                href="https://www.youtube.com/watch?v=AB1pEGQrwcg"
+                id="imageText"
+            ></a>
+        </div>
+
+        <script>
+            const items = [
+                {
+                    src: "img/bergmann.png",
+                    description: "To je ale nebezpečná situace!",
+                },
+                {
+                    src: "img/pelikan.png",
+                    description: "Co to je ten zpětný průlom?",
+                },
+                {
+                    src: "img/kuneticka.png",
+                    description: "Ale potom to všechno vypadá jinak",
+                },
+                {
+                    src: "img/pavlik.png",
+                    description:
+                        "A není to vyšší standard pohlednosti, co myslíte?",
+                },
+            ];
+
+            window.onload = function () {
+                const item = items[Math.floor(Math.random() * items.length)];
+                document.getElementById("randomImage").src = item.src;
+                document.getElementById("randomImage").alt = item.description;
+                document.getElementById("imageText").innerText =
+                    item.description;
+            };
+        </script>
+    </body>
+</html>
