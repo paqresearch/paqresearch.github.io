@@ -16,9 +16,9 @@
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script async>
     (async () => {
-      const json1 = await fetch('./KU.min.geojson');
+      const json1 = await fetch('./KU.min.geojson?v=2');
       const data1 = await json1.json();
-      const json2 = await fetch('./male_obce.min.geojson');
+      const json2 = await fetch('./male_obce.min.geojson?v=2');
       const data2 = await json2.json();
       const map = L.map('map').setView([49.803, 15.474], 7);
       L.tileLayer('https://{s}.basemaps.cartocdn.com/{variant}/{z}/{x}/{y}{r}.png', {
