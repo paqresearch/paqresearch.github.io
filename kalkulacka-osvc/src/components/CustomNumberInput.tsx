@@ -115,7 +115,7 @@ export function CustomNumberInput({
         type="text"
         inputMode="numeric"
         pattern="[0-9]*"
-        className={`w-full p-3 pl-8 text-center text-2xl border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+        className={`w-full p-2 pl-8 text-center text-xl border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
           isOutOfRange ? "border-red-500" : ""
         }`}
         value={formatValue(localValue)}

@@ -32,7 +32,7 @@ export function Kalkulacka1() {
                 value={income}
                 onChange={(value) => setIncome(value)}
               />
-              {income && (
+              {!!income && (
                 <p className="text-sm text-center mt-2">
                   {income < 100000 && "Není to málo?"}
                   {income > 3000000 && "Není to moc?"}
