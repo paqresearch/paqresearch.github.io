@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/osvc-kalkulacka/dist/",
+  base: "/kalkulacka-osvc/dist/",
   plugins: [react()],
   resolve: {
     alias: {
