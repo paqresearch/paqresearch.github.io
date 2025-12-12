@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <style>
+    .hidden {
+      visibility: hidden;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .embed-test {
+      width: 1000px;
+      margin: 20px auto;
+    }
+
+    .mb-4 {
+      margin-bottom: 16px;
+    }
+
+    .switch-tab {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  </style>
+</head>
+
+<body class="embed-test">
+  <div class="mb-4">
+    <input type="radio" name="tab" id="prehled" value="prehled" checked />
+    <label for="prehled">Přehled</label>
+    <input type="radio" name="tab" id="narok" value="narok" />
+    <label for="narok">Nárok</label>
+    <input type="radio" name="tab" id="cerpani" value="cerpani" />
+    <label for="cerpani">Čerpání</label>
+    <input type="radio" name="tab" id="deti" value="deti" />
+    <label for="deti">Děti</label>
+    <input type="radio" name="tab" id="majetek" value="majetek" />
+    <label for="majetek">Majetek</label>
+  </div>
+
+  <div class="switch-tab" id="prehled-tab">
+    <iframe src="https://paqresearch.github.io/sankey/davky3/sankey.html" scrolling="no" frameborder="0"
+      allowtransparency="true" style="width: 0; min-width: 100% !important;" height="550"
+      id="paq-sankey-ffaf5093"></iframe>
+  </div>
+
+  <div class="switch-tab hidden" id="narok-tab">
+    <iframe src="https://paqresearch.github.io/sankey/davky_bottom20/sankey.html" scrolling="no" frameborder="0"
+      allowtransparency="true" style="width: 0; min-width: 100% !important;" height="550"
+      id="paq-sankey-dfc46f57"></iframe>
+    <iframe src="https://paqresearch.github.io/sankey/davky_top80/sankey.html" scrolling="no" frameborder="0"
+      allowtransparency="true" style="width: 0; min-width: 100% !important;" height="550"
+      id="paq-sankey-044e6651"></iframe>
+  </div>
+
+  <div class="switch-tab hidden" id="cerpani-tab">
+    <iframe src="https://paqresearch.github.io/sankey/davky_cerpa/sankey.html" scrolling="no" frameborder="0"
+      allowtransparency="true" style="width: 0; min-width: 100% !important;" height="550"
+      id="paq-sankey-a0016fb2"></iframe>
+    <iframe src="https://paqresearch.github.io/sankey/davky_necerpa/sankey.html" scrolling="no" frameborder="0"
+      allowtransparency="true" style="width: 0; min-width: 100% !important;" height="550"
+      id="paq-sankey-d4b2f4b2"></iframe>
+  </div>
+
+  <div class="switch-tab hidden" id="deti-tab">
+    <iframe src="https://paqresearch.github.io/sankey/davky_deti/sankey.html" scrolling="no" frameborder="0"
+      allowtransparency="true" style="width: 0; min-width: 100% !important;" height="550"
+      id="paq-sankey-22ebc341"></iframe>
+    <iframe src="https://paqresearch.github.io/sankey/davky_nedeti/sankey.html" scrolling="no" frameborder="0"
+      allowtransparency="true" style="width: 0; min-width: 100% !important;" height="550"
+      id="paq-sankey-abdc79ac"></iframe>
+  </div>
+
+  <div class="switch-tab hidden" id="majetek-tab">
+    <iframe src="https://paqresearch.github.io/sankey/davky_majitele/sankey.html" scrolling="no" frameborder="0"
+      allowtransparency="true" style="width: 0; min-width: 100% !important;" height="550"
+      id="paq-sankey-7f830bea"></iframe>
+    <iframe src="https://paqresearch.github.io/sankey/davky_najemnici/sankey.html" scrolling="no" frameborder="0"
+      allowtransparency="true" style="width: 0; min-width: 100% !important;" height="550"
+      id="paq-sankey-104f9615"></iframe>
+  </div>
+
+
+  <script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("prehled").checked = true;
+    })
+    document.getElementById("prehled").addEventListener("click", () => {
+      for (const el of document.getElementsByClassName("switch-tab")) {
+        if (el.id === "prehled-tab") el.classList.remove("hidden")
+        else el.classList.add("hidden");
+      }
+    });
+    document.getElementById("narok").addEventListener("click", () => {
+      for (const el of document.getElementsByClassName("switch-tab")) {
+        if (el.id === "narok-tab") el.classList.remove("hidden")
+        else el.classList.add("hidden");
+      }
+    });
+    document.getElementById("cerpani").addEventListener("click", () => {
+      for (const el of document.getElementsByClassName("switch-tab")) {
+        if (el.id === "cerpani-tab") el.classList.remove("hidden")
+        else el.classList.add("hidden");
+      }
+    });
+    document.getElementById("deti").addEventListener("click", () => {
+      for (const el of document.getElementsByClassName("switch-tab")) {
+        if (el.id === "deti-tab") el.classList.remove("hidden")
+        else el.classList.add("hidden");
+      }
+    });
+    document.getElementById("majetek").addEventListener("click", () => {
+      for (const el of document.getElementsByClassName("switch-tab")) {
+        if (el.id === "majetek-tab") el.classList.remove("hidden")
+        else el.classList.add("hidden");
+      }
+    });
+
+    window.addEventListener("message", function (a) {
+      if (void 0 !== a.data["paq-embed-height"]) {
+        for (var e in a.data["paq-embed-height"]) {
+          if ("paq-sankey-ffaf5093" == e) {
+            var d = document.querySelector("#paq-sankey-ffaf5093");
+            d && (d.style.height = a.data["paq-embed-height"][e] + "px")
+          }
+          if ("paq-sankey-dfc46f57" == e) {
+            var d = document.querySelector("#paq-sankey-dfc46f57");
+            d && (d.style.height = a.data["paq-embed-height"][e] + "px")
+          }
+          if ("paq-sankey-044e6651" == e) {
+            var d = document.querySelector("#paq-sankey-044e6651");
+            d && (d.style.height = a.data["paq-embed-height"][e] + "px")
+          }
+          if ("paq-sankey-a0016fb2" == e) {
+            var d = document.querySelector("#paq-sankey-a0016fb2");
+            d && (d.style.height = a.data["paq-embed-height"][e] + "px")
+          }
+          if ("paq-sankey-d4b2f4b2" == e) {
+            var d = document.querySelector("#paq-sankey-d4b2f4b2");
+            d && (d.style.height = a.data["paq-embed-height"][e] + "px")
+          }
+          if ("paq-sankey-22ebc341" == e) {
+            var d = document.querySelector("#paq-sankey-22ebc341");
+            d && (d.style.height = a.data["paq-embed-height"][e] + "px")
+          }
+          if ("paq-sankey-abdc79ac" == e) {
+            var d = document.querySelector("#paq-sankey-abdc79ac");
+            d && (d.style.height = a.data["paq-embed-height"][e] + "px")
+          }
+          if ("paq-sankey-7f830bea" == e) {
+            var d = document.querySelector("#paq-sankey-7f830bea");
+            d && (d.style.height = a.data["paq-embed-height"][e] + "px")
+          }
+          if ("paq-sankey-104f9615" == e) {
+            var d = document.querySelector("#paq-sankey-104f9615");
+            d && (d.style.height = a.data["paq-embed-height"][e] + "px")
+          }
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
