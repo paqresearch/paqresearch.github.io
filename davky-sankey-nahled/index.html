@@ -20,6 +20,17 @@
       margin-bottom: 16px;
     }
 
+    .radio-input {
+      font-size: 20px;
+      font-family: sans-serif;
+      display: flex;
+      gap: 20px;      
+    }
+
+    .radio-input input, .radio-input label {
+      cursor: pointer;
+    }
+
     .switch-tab {
       display: flex;
       flex-direction: column;
@@ -29,17 +40,27 @@
 </head>
 
 <body class="embed-test">
-  <div class="mb-4">
-    <input type="radio" name="tab" id="prehled" value="prehled" checked />
-    <label for="prehled">Přehled</label>
-    <input type="radio" name="tab" id="narok" value="narok" />
-    <label for="narok">Nárok</label>
-    <input type="radio" name="tab" id="cerpani" value="cerpani" />
-    <label for="cerpani">Čerpání</label>
-    <input type="radio" name="tab" id="deti" value="deti" />
-    <label for="deti">Děti</label>
-    <input type="radio" name="tab" id="majetek" value="majetek" />
-    <label for="majetek">Majetek</label>
+  <div class="mb-4 radio-input">
+    <div>
+      <input type="radio" name="tab" id="prehled" value="prehled" checked />
+      <label for="prehled">Přehled</label>
+    </div>
+    <div>
+      <input type="radio" name="tab" id="narok" value="narok" />
+      <label for="narok">Nárok</label>
+    </div>
+    <div>
+      <input type="radio" name="tab" id="cerpani" value="cerpani" />
+      <label for="cerpani">Čerpání</label>
+    </div>
+    <div>
+      <input type="radio" name="tab" id="deti" value="deti" />
+      <label for="deti">Děti</label>
+    </div>
+    <div>
+      <input type="radio" name="tab" id="majetek" value="majetek" />
+      <label for="majetek">Majetek</label>
+    </div>
   </div>
 
   <div class="switch-tab" id="prehled-tab">
