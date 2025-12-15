@@ -25,10 +25,11 @@
       font-family: sans-serif;
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;      
+      gap: 20px;
     }
 
-    .radio-input input, .radio-input label {
+    .radio-input input,
+    .radio-input label {
       cursor: pointer;
     }
 
@@ -44,23 +45,23 @@
   <div class="mb-4 radio-input">
     <div>
       <input type="radio" name="tab" id="prehled" value="prehled" checked />
-      <label for="prehled">Přehled</label>
+      <label for="prehled">Všechny domácnosti</label>
     </div>
     <div>
       <input type="radio" name="tab" id="narok" value="narok" />
-      <label for="narok">Nárok</label>
+      <label for="narok">Výše příjmu</label>
     </div>
     <div>
       <input type="radio" name="tab" id="cerpani" value="cerpani" />
-      <label for="cerpani">Čerpání</label>
+      <label for="cerpani">Čerpání současných dávek</label>
     </div>
     <div>
       <input type="radio" name="tab" id="deti" value="deti" />
-      <label for="deti">Děti</label>
+      <label for="deti">Domácnosti s dětmi/bez dětí</label>
     </div>
     <div>
       <input type="radio" name="tab" id="majetek" value="majetek" />
-      <label for="majetek">Majetek</label>
+      <label for="majetek">Typ bydlení</label>
     </div>
   </div>
 
@@ -98,12 +99,12 @@
   </div>
 
   <div class="switch-tab hidden" id="majetek-tab">
-    <iframe src="https://paqresearch.github.io/sankey/davky_majitele/sankey.html" scrolling="no" frameborder="0"
-      allowtransparency="true" style="width: 0; min-width: 100% !important;" height="550"
-      id="paq-sankey-7f830bea"></iframe>
     <iframe src="https://paqresearch.github.io/sankey/davky_najemnici/sankey.html" scrolling="no" frameborder="0"
       allowtransparency="true" style="width: 0; min-width: 100% !important;" height="550"
       id="paq-sankey-104f9615"></iframe>
+    <iframe src="https://paqresearch.github.io/sankey/davky_majitele/sankey.html" scrolling="no" frameborder="0"
+      allowtransparency="true" style="width: 0; min-width: 100% !important;" height="550"
+      id="paq-sankey-7f830bea"></iframe>
   </div>
 
 
