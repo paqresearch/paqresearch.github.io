@@ -1,12 +1,13 @@
-# Obecní volby 2026 – váha mandátu (verze 2)
+# Obecní volby 2026 – váha mandátu (verze 2), náhled
 
-Druhá verze stránky: výběr kraje a srovnání s rokem 2022. Postavená na
-React + shadcn/ui v barvách a písmech PAQ Research.
+**Vymyšlené výsledky, ne skutečné.** Kandidátky jsou skutečné kandidátky
+roku 2026, hlasy vymyšlené: každá kandidátka dostala, co její strana získala
+v téže obci v roce 2022, s náhodnou odchylkou. Nejde o odhad ani průzkum.
+Každá stránka to říká v pruhu nahoře a vyhledávačům se nenabízí (noindex).
 
-**Zatím náhled na ukázkových datech** – skutečné výsledky voleb 2022. Srovnání
-s rokem 2022 se objeví, jakmile budou spočtená první zastupitelstva 2026.
+`index.html` vede na čtyři okamžiky noci sčítání (10, 50, 90 a 100 %
+spočtených zastupitelstev) s časy podle skutečného průběhu sčítání v roce
+2022. Každá složka obsahuje stránku a její `data_v2.json`; `assets/` sdílejí.
 
-Stránku tvoří sestavená aplikace (`index.html`, `assets/`) a data
-`data_v2.json`, která si každou minutu načítá znovu. Obojí vzniká
-v repozitáři `matyasLevinsky/obecni-volby` (`web/` a `R/25_views.R`);
-tady se nic needituje ručně.
+Vzniká v repozitáři `matyasLevinsky/obecni-volby` příkazem
+`Rscript R/26_preview.R --export DIR`; tady se nic needituje ručně.
