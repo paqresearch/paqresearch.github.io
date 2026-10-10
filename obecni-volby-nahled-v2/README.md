@@ -1,13 +1,13 @@
-# Obecní volby 2026 – váha mandátu (verze 2), náhled
+# Obecní volby 2026 – váha mandátu
 
-**Vymyšlené výsledky, ne skutečné.** Kandidátky jsou skutečné kandidátky
-roku 2026, hlasy vymyšlené: každá kandidátka dostala, co její strana získala
-v téže obci v roce 2022, s náhodnou odchylkou. Nejde o odhad ani průzkum.
-Každá stránka to říká v pruhu nahoře a vyhledávačům se nenabízí (noindex).
+Stránka PAQ Research k sčítání hlasů komunálních voleb 9.–10. října 2026:
+mandáty přepočtené na obyvatele, hlasy přepočtené na voliče a změna proti
+roku 2022, za celou ČR i po krajích.
 
-`index.html` vede na čtyři okamžiky noci sčítání (10, 50, 90 a 100 %
-spočtených zastupitelstev) s časy podle skutečného průběhu sčítání v roce
-2022. Každá složka obsahuje stránku a její `data_v2.json`; `assets/` sdílejí.
+`index.html` a `assets/` jsou stránka, `data_v2.json` její data. Stránka si
+data načítá znovu každou minutu. Během sčítání je sem po každé dávce ČSÚ
+nahrává `R/live.R --publish` z repozitáře `matyasLevinsky/obecni-volby`
+(viz `R/29_publish.R`); před začátkem sčítání obsahuje stav bez výsledků roku
+2026, s konečnými výsledky roku 2022.
 
-Vzniká v repozitáři `matyasLevinsky/obecni-volby` příkazem
-`Rscript R/26_preview.R --export DIR`; tady se nic needituje ručně.
+Tady se nic needituje ručně.
