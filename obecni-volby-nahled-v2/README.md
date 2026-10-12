@@ -23,7 +23,7 @@ pohled se vybere částí adresy za `#` – stačí ji zkopírovat z prohlíže�
 ```html
 <iframe src="https://paqresearch.github.io/obecni-volby-nahled-v2/?embed#obyvatel/CZ/stav"
         title="Obecní volby 2026 – PAQ Research"
-        style="width:100%;height:900px;border:0" loading="lazy"></iframe>
+        style="width:100vw;max-width:100%;height:900px;border:0" loading="lazy"></iframe>
 <script>
 (function () {
   var PUVOD = 'https://paqresearch.github.io'
@@ -42,3 +42,12 @@ pohled se vybere částí adresy za `#` – stačí ji zkopírovat z prohlíže�
 
 Skript stačí na stránce jednou, i pro několik vložených pohledů. Bez něj iframe
 funguje také, jen s pevnou výškou 900 px a posuvníkem uvnitř.
+
+Šířka `100vw` s `max-width:100%` je kvůli šabloně paqresearch.cz: sloupec
+článku je tam od 1024 px široký jen jako jeho obsah a `width:100%` by iframe
+nechala na výchozích 300 px. Takhle sloupec vyplní (670 px) a na telefonu se
+vejde na šířku displeje.
+
+Na Ghostu je nejspolehlivější dát skript jednou do Settings → Code injection →
+Site footer (nebo do Code injection konkrétního příspěvku); do HTML karty pak
+stačí samotný iframe.
