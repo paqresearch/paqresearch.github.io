@@ -15,7 +15,7 @@ Tady se nic needituje ručně.
 ## Vložení na jinou stránku
 
 Stránka se dá vložit do článku přes iframe. Adresa s `?embed` ukáže jen jeden
-graf: bez záhlaví, bez záložek a bez vysvětlivek pod grafem. Odkazy otevírá
+graf: bez záhlaví, záložek, stavu sčítání a vysvětlivek pod grafem. Odkazy otevírá
 v nové záložce a hostitelské stránce hlásí svou výšku, takže iframe roste
 a zmenšuje se s obsahem a nemá vlastní posuvník. Který graf to bude, určuje
 část adresy za `#` – stačí ji zkopírovat z prohlížeče (např.
