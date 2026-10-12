@@ -14,11 +14,13 @@ Tady se nic needituje ručně.
 
 ## Vložení na jinou stránku
 
-Stránka se dá vložit do článku přes iframe. Adresa s `?embed` skryje nadpis
-stránky, odkazy otevírá v nové záložce a hlásí hostitelské stránce svou výšku,
-takže iframe roste a zmenšuje se s obsahem a nemá vlastní posuvník. Konkrétní
-pohled se vybere částí adresy za `#` – stačí ji zkopírovat z prohlížeče
-(např. `#mandatu/CZ064/zmena`).
+Stránka se dá vložit do článku přes iframe. Adresa s `?embed` ukáže jen jeden
+graf: bez záhlaví, bez záložek a bez vysvětlivek pod grafem. Odkazy otevírá
+v nové záložce a hostitelské stránce hlásí svou výšku, takže iframe roste
+a zmenšuje se s obsahem a nemá vlastní posuvník. Který graf to bude, určuje
+část adresy za `#` – stačí ji zkopírovat z prohlížeče (např.
+`#mandatu/CZ064/zmena`; záložky jsou `obyvatel`, `volicu`, `hlasu`, `mandatu`).
+Ovládání grafu (rok, kraj, NK) zůstává.
 
 ```html
 <iframe src="https://paqresearch.github.io/obecni-volby-nahled-v2/?embed#obyvatel/CZ/stav"
